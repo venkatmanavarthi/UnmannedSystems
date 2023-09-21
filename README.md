@@ -22,8 +22,17 @@ if __name__ == "__main__":
 ```
 
 ![Problem 1 Output](problem1.png)
+## Problem 2
+Given the map below, and a grid spacing of 1, use A* to compute the path (by hand) from start to
+finish (start = red, goal = blue, obstacles = black)
+![Problem 2 Output](IMG_1141.jpg)
 
 ## Problem 3
+Modify your Dijkstra/A* code to use the RRT method to get from the start to the goal. Use the
+same obstacle list and bounding box. Use a distance to jump (from nearest node in the tree) of 0.5.
+
+Create a plot showing the tree (valid nodes) and the corresponding path to get from the start to the
+goal for the same map as Problem 2.
 ```
 from HW2.hw1 import Node 
 from HW2.problem1 import calculate_distance
