@@ -1,4 +1,4 @@
-from problem1 import calculate_distance
+from .problem1 import calculate_distance
 import matplotlib.pyplot as plt
 
 class Obstacle:
@@ -7,7 +7,7 @@ class Obstacle:
         self.y = y
         self.radius = radius
 
-    def is_inside(self, cur_x, cur_y, r_radius=0) -> bool:
+    def is_inside(self, cur_x, cur_y, r_radius=0.2) -> bool:
         """
         Args:
           cur_x: X position of the robot
@@ -17,7 +17,7 @@ class Obstacle:
         Returns:
           True if point is inside the obstacle
           False if point is outside the obstacle
-        """
+        """ 
         dis = calculate_distance(cur_x, cur_y, self.x, self.y)
         if dis > (self.radius + r_radius):
             return False
